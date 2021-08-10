@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Nunito Sans', 'NanumSquareRound';
+    font-weight: bold;
+}
+
+#wrap {
+    width: 1920px;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #f8ffe0;
+}
+
+.header_box {
+    width: 1320px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    width: 204px;
+}
+
+header h1 img {
+    width: 193px;
+    height: 52px;
+}
+
+.header_icon img:hover {
+    transform: scale(1.2);
+}
+
+nav {
+    width: 895px;
+    height: 20px;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+}
+
+nav li {
+    padding: 0 30px;
+}
+
+nav li:hover {
+    color: #637912;
+}
+
+.header_icon {
+    padding-left: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.header_icon img {
+    padding-left: 30px;
+}
+
+#contents {
+    width: 690px;
+    height: 1327px;
+    margin: 100px auto 100px;
+}
+
+.txt_1 {
+    width: 100%;
+    height: 200px;
+}
+
+.txt_1 > div:first-child {
+    font-size: 30px;
+    color: #333;
+}
+
+.txt_1 > div:nth-child(2) {
+    width: 100%;
+    height: 3px;
+    background-color: #b2d448;
+    margin-top: 13px;
+}
+
+.txt_1 > div:nth-child(3) {
+    font-size: 22px;
+    color: #333;
+    margin-top: 35px;
+}
+
+.txt_1 > div:last-child {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 35px;
+}
+
+.naver_kakao {
+    width: 100%;
+    height: 53px;
+    margin: 50px 0 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.naver, .kakao {
+    width: 335px;
+    height: 53px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.naver > div:first-child,
+.kakao > div:first-child {
+    width: 50px;
+    height: 53px;
+    line-height: 53px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.naver > div:last-child,
+.kakao > div:last-child {
+    width: 285px;
+    height: 53px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 53px;
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    height: 361px;
+}
+
+.form form input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.form > form > input:first-child {
+    margin-bottom: 20px;
+}
+
+.form form input::placeholder {
+    color: #999;
+    font-size: 15px;
+}
+
+.form > form > input:nth-child(2) {
+    width: 558px;
+    height: 50px;
+    float: left;
+}
+
+.form > form > div {
+    width: 112px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form > form > div div {
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.form > form > div > div:first-of-type {
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form > form > input:nth-of-type(3) {
+    width: 558px;
+    height: 50px;
+    clear: both;
+    margin-top: 48px;
+}
+
+.form button {
+    width: 112px;
+    height: 50px;
+    font-size: 15px;
+    color: #444;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 15px;
+}
+
+input[type=password] {
+    margin-top: 20px;
+}
+
+.txt_2 {
+    width: 100%;
+    height: 200px;
+    margin-top: 70px;
+    color: #444;
+}
+
+.txt_2 > div:first-child {
+    font-size: 25px;
+}
+
+.txt_2 > div:last-child {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.check {
+    width: 100%;
+    height: 324px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+#contents > button {
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+}
+
+.footer_box {
+    width: 1320px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.footer_box > img {
+    float: left;
+    margin-top: 50px;
+}
+
+.footer_txt {
+    width: 822px;
+    height: 130px;
+    padding-left: 70px;
+    float: left;
+}
+
+.footer_txt > div:first-of-type ul {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 0 15px;
+}
+
+.footer_txt > div:first-of-type ul li {
+    font-size: 15px;
+    color: #555;
+    padding-right: 50px;
+}
+
+.footer_txt > div:nth-of-type(2) {
+    width: 815px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_txt > div:nth-of-type(2) li {
+    font-size: 10px;
+    color: #555;
+    line-height: 20px;
+}
+
+.sns {
+    float: left;
+    margin: 20px 0 0 70px;
+}
+
+.sns img {
+    padding: 3px;
+}
+
+.sns img:hover {
+    transform: scale(1.2);
+}
+
+.footer_box span:last-of-type {
+    float: right;
+    margin-top: 20px;
+}
+
+.footer_box span:last-of-type:hover {
+    transform: scale(1.2);
+}
