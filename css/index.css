@@ -13,7 +13,7 @@ body {
 }
 
 #wrap {
-    width: 1920px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -21,6 +21,8 @@ header {
     width: 100%;
     height: 100px;
     background-color: #f8ffe0;
+    position: relative;
+    z-index: 99;
 }
 
 .header_box {
@@ -28,6 +30,7 @@ header {
     height: 100px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -40,58 +43,88 @@ header h1 img {
     height: 52px;
 }
 
-.header_icon img:hover {
-    transform: scale(1.2);
-}
-
 nav {
-    width: 895px;
-    height: 20px;
+    width: 984px;
+    /* height: 100px; */
 }
 
-nav > ul {
-    display: flex;
-    justify-content: flex-end;
+.gnb {
+    width: auto;
+    float: right;
+}
+
+.gnb ul {
+    width: auto;
+    margin: 0 auto;
+}
+
+.gnb li {
+    width: 150px;
+    float: left;
     font-size: 18px;
+    line-height: 90px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
 }
 
-nav li {
-    padding: 0 30px;
-}
-
-nav li:hover {
+.gnb li:hover, .submenu a:hover {
     color: #637912;
 }
 
+.submenu li {
+    font-size: 15px;
+    line-height: 50px;
+    color: #555;
+}
+
+.submenu {
+    height: 400px;
+    display: none;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+
+.gnb li:hover .submenu {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #f8ffe0;
+}
+
 .header_icon {
-    padding-left: 70px;
     display: flex;
     align-items: center;
 }
 
-.header_icon img {
+.header_icon a img {
     padding-left: 30px;
 }
 
 .main_banner {
     width: 100%;
-    height: 600px;
-    position: relative;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
-
+ 
 .main_banner_bg {
-    position: absolute;
     width: 100%;
     height: 332px;
-    background-color: #f8ffe0;    
+    background-color: #f8ffe0;
+    position: relative;   
 }
 
 .main_banner_box {
-    position: absolute;
     width: 1320px;
-    margin-top: 145px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: -175px;
 }
 
 .main_banner_box img {
@@ -140,12 +173,20 @@ nav li:hover {
 }
 
 .swiper {
-    padding: 100px 0 0 600px;
+    width: 88px;
+    height: 20px;
+    margin: 0 auto;
+} 
+
+#contents_wrap {
+    width: 1320px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 #contents1 {
-    width: 1320px;
-    height: 1000px;
+    width: 100%;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -157,7 +198,6 @@ nav li:hover {
 
 .contents1_title div:first-child {
     font-size: 25px;
-    /* font-weight: 500; */
     margin-top: 66px;
     float: left;
 }
@@ -260,7 +300,7 @@ nav li:hover {
 
 #contents2 {
     width: 100%;
-    height: 700px;
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -270,21 +310,13 @@ nav li:hover {
     margin: 0 auto;
     font-size: 25px;
     display: flex;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
-.prev {
-    position: relative;
-    width: 300px;
-    height: 600px;
-    float: left;
-}
-
-.prev img {
-    position: absolute;
-    top: 284px;
-    left: 238px;
-    right: 30px;
+img[alt=prev], img[alt=next] {
+    width: 25px;
+    height: 25px;
 }
 
 .contents2_items {
@@ -363,7 +395,6 @@ nav li:hover {
     position: relative;
     width: 300px;
     height: 600px;
-    float: right;
 }
 
 .next img {
@@ -373,8 +404,8 @@ nav li:hover {
 }
 
 #contents3 {
-    width: 1320px;
-    height: 600px;
+    width: 100%;
+    overflow: hidden;
     margin: 0 auto 150px;
 }
 
@@ -760,15 +791,7 @@ footer {
     padding: 3px;
 }
 
-.sns img:hover {
-    transform: scale(1.2);
-}
-
 .footer_box span:last-of-type {
     float: right;
     margin-top: 20px;
-}
-
-.footer_box span:last-of-type:hover {
-    transform: scale(1.2);
 }
