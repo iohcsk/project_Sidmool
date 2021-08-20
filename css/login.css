@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: 'NanumSquareRound';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Nunito Sans', 'NanumSquareRound';
-    font-weight: bold;
-}
-
 #wrap {
     width: 100%;
     overflow: hidden;
@@ -45,17 +33,11 @@ header h1 img {
 
 nav {
     width: 984px;
-    /* height: 100px; */
 }
 
 .gnb {
     width: auto;
     float: right;
-}
-
-.gnb ul {
-    width: auto;
-    margin: 0 auto;
 }
 
 .gnb li {
@@ -79,13 +61,13 @@ nav {
 }
 
 .submenu {
-    height: 400px;
-    display: none;
+    height: 0;
     overflow: hidden;
     position: relative;
     top: 20px;
     left: 0;
     width: 100%;
+    transition-duration: 0.5s;
 }
 
 .gnb li:hover .submenu {
@@ -117,7 +99,6 @@ nav {
     width: 500px;
     overflow: hidden;
     margin: 90px auto 100px;
-    /* height: 510px; */
     border: 1px solid #ddd;
     border-radius: 50px;
 }
@@ -129,7 +110,7 @@ nav {
     margin-top: 70px;
 }
 
-.login_box h3 {
+.login_box p {
     font-size: 20px;
     color: #666;
     text-align: center;
@@ -146,8 +127,6 @@ form {
     display: inline-block;
     width: 267px;
     overflow: hidden;
-    /* margin-top: 45px;
-    margin-left: 50px; */
 }
 
 form input {
@@ -161,6 +140,7 @@ form input {
 }
 
 form input::placeholder {
+    font-family: 'NanumSquareRound';
     color: #999;
     font-size: 15px;
 }
@@ -168,6 +148,7 @@ form input::placeholder {
 button[name=login] {
     width: 100px;
     height: 100px;
+    font-family: 'NanumSquareRound';
     font-size: 15px;
     color: #fff;
     background-color: #b2d448;
@@ -175,6 +156,11 @@ button[name=login] {
     border-radius: 10px;
     cursor: pointer;
     float: right; 
+}
+
+button[name=login]:hover {
+    background-color: #9cb451;
+    transition-duration: 0.5s;
 }
 
 input[type=checkbox] {
@@ -209,13 +195,15 @@ label span:first-child {
     background-position: center;
 }
 
-label span:last-child {
+label h3 {
+    display: inline;
     font-size: 13px;
     line-height: 30px;
     cursor: pointer;
 }
 
-.save_search > span > a {
+.save_search > a > h3 {
+    display: inline;
     font-size: 13px;
     color: #999;
     padding-left: 178px;
@@ -230,7 +218,8 @@ label span:last-child {
 button[name=join] {
     width: 267px;
     height: 60px;
-    font-size: 13px;
+    font-family: 'NanumSquareRound';
+    font-size: 15px;
     color: #fff;
     background-color: #637912;
     border: none;
@@ -238,16 +227,27 @@ button[name=join] {
     cursor: pointer;
 }
 
+button[name=join]:hover {
+    background-color: #a1b948;
+    transition-duration: 0.5s;
+}
+
 button[name=non_member_order] {
     width: 100px;
     height: 60px;
-    font-size: 13px;
+    font-family: 'NanumSquareRound';
+    font-size: 15px;
     color: #fff;
     background-color: #ccc;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     margin-left: 28px;
+}
+
+button[name=non_member_order]:hover {
+    background-color: #555;
+    transition-duration: 0.5s;
 }
 
 footer {
@@ -277,7 +277,7 @@ footer {
 .footer_txt > div:first-of-type ul {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 0 15px;
+    padding: 20px 0;
 }
 
 .footer_txt > div:first-of-type ul li {
