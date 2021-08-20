@@ -297,7 +297,7 @@ nav {
 .contents2_title, .contents3_title {
     width: 100%;
     height: 100px;
-    margin: 0 auto;
+    margin: 50px auto 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
