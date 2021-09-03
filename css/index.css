@@ -71,7 +71,6 @@ nav {
 }
 
 .gnb li:hover .submenu {
-    display: block;
     position: absolute;
     top: 65px;
     left: 0;
