@@ -88,6 +88,8 @@ nav {
     padding-left: 30px;
 }
 
+/* contents */
+
 .main_banner {
     width: 100%;
     overflow: hidden;
@@ -725,6 +727,8 @@ img[alt=prev], img[alt=next] {
     color: #fff;
     padding-top: 25px;
 }
+
+/* footer */
 
 footer {
     width: 100%;
