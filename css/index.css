@@ -5,6 +5,8 @@
     overflow: hidden;
 }
 
+/* Header */
+
 header {
     width: 100%;
     height: 100px;
@@ -88,7 +90,7 @@ nav {
     padding-left: 30px;
 }
 
-/* contents */
+/* Main Banner */
 
 .main_banner {
     width: 100%;
@@ -159,7 +161,9 @@ nav {
     width: 88px;
     height: 20px;
     margin: 0 auto;
-} 
+}
+
+/* Contents */
 
 #contents_wrap {
     width: 1320px;
@@ -728,7 +732,7 @@ img[alt=prev], img[alt=next] {
     padding-top: 25px;
 }
 
-/* footer */
+/* Footer */
 
 footer {
     width: 100%;

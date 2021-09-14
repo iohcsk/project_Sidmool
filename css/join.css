@@ -67,7 +67,7 @@ nav {
     top: 20px;
     left: 0;
     width: 100%;
-    transition-duration: 0.5s;
+    transition-duration: .5s;
 }
 
 .gnb li:hover .submenu {
@@ -88,6 +88,8 @@ nav {
 .header_icon img {
     padding-left: 30px;
 }
+
+/* Contents */
 
 #contents {
     width: 690px;
@@ -349,8 +351,10 @@ label[for="checkbox5"] span {
     background-color: #fff;
     border: 1px solid #333;
     box-sizing: border-box;
-    transition-duration: 0.5s;
+    transition-duration: .5s;
 }
+
+/* Footer */
 
 footer {
     width: 100%;

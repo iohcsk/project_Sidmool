@@ -5,6 +5,8 @@
     overflow: hidden;
 }
 
+/* Header */
+
 header {
     width: 100%;
     height: 100px;
@@ -88,7 +90,7 @@ nav {
     padding-left: 30px;
 }
 
-/* contents */
+/* Contents */
 
 .contents_wrap {
     width: 1320px;
@@ -246,7 +248,7 @@ nav {
     float: right;
 }
 
-/* footer */
+/* Footer */
 
 footer {
     width: 100%;
