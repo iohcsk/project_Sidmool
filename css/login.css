@@ -114,7 +114,7 @@ nav {
     margin-top: 70px;
 }
 
-.login_box p {
+.login_box > p {
     font-size: 20px;
     color: #666;
     text-align: center;
@@ -164,13 +164,7 @@ button[name=login] {
 
 button[name=login]:hover {
     background-color: #637912;
-    border: 1px solid #b2d448;
-    box-sizing: border-box;
     transition-duration: .3s;
-}
-
-input[type=checkbox] {
-    display: none;
 }
 
 .save_search {
@@ -179,16 +173,20 @@ input[type=checkbox] {
     margin: 0 auto;
 }
 
+input[type=checkbox] {
+    display: none;
+}
+
 label {
     color: #777;
     font-size: 15px;
 }
 
-label span:first-child {
-    width: 30px;
-    height: 30px;
+label span {
+    width: 25px;
+    height: 25px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 30%;
     box-sizing: border-box;
     cursor: pointer;
     margin-right: 10px;
@@ -196,29 +194,30 @@ label span:first-child {
 }
 
 input[type=checkbox]:checked +
-label span:first-child {
+label span {
     background: url(../img/check.png) no-repeat;
     background-position: center;
 }
 
-label h3 {
+.save_search label[for=checkbox] p {
     display: inline;
     font-size: 13px;
-    line-height: 30px;
+    line-height: 25px;
     cursor: pointer;
 }
 
-.save_search > a > h3 {
+.save_search > p {
     display: inline;
     font-size: 13px;
     color: #999;
-    padding-left: 178px;
+    line-height: 25px;
+    float: right;
 }
 
 .buttons_bottom {
     width: 400px;
     overflow: hidden;
-    margin: 25px auto 70px;
+    margin: 50px auto 70px;
 }
 
 button[name=join] {
@@ -235,8 +234,6 @@ button[name=join] {
 
 button[name=join]:hover {
     background-color: #b2d448;
-    border: 1px solid #637912;
-    box-sizing: border-box;
     transition-duration: .3s;
 }
 
@@ -255,8 +252,6 @@ button[name=non_member_order] {
 
 button[name=non_member_order]:hover {
     background-color: #555;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
     transition-duration: .3s;
 }
 
