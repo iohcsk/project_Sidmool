@@ -95,13 +95,6 @@ nav {
 
 /* Contents */
 
-.contents_wrap {
-    max-width: 1320px;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
 .title {
     width: 100%;
     overflow: hidden;
@@ -134,7 +127,7 @@ nav {
     height: 2px;
     background-color: #ccc;
     position: absolute;
-    left: 515px;
+    left: 805px;
     top: 60px;
 }
 
