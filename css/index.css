@@ -171,17 +171,16 @@ nav {
 
 /* Contents */
 
-#contents_wrap {
+.contents_wrap {
     max-width: 1320px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
 }
 
-#contents1 {
+.contents1 {
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .contents1_title, .contents2_title {
@@ -298,10 +297,9 @@ nav {
     transition-duration: 0.5s;
 }
 
-#contents2 {
+.contents2 {
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .contents2_title, .contents3_title {
@@ -317,9 +315,11 @@ nav {
     font-size: 25px;
 }
 
-img[alt=prev], img[alt=next] {
+.contents2_title div img {
     width: 25px;
     height: 25px;
+    margin: 0 10px;
+    cursor: pointer;
 }
 
 .contents2_items {
@@ -409,10 +409,10 @@ img[alt=prev], img[alt=next] {
     transition-duration: 0.5s;
 }
 
-#contents3 {
+.contents3 {
     width: 100%;
     overflow: hidden;
-    margin: 0 auto 150px;
+    margin-bottom: 150px;
 }
 
 .contents3_items {
@@ -433,7 +433,7 @@ img[alt=prev], img[alt=next] {
     overflow: hidden;
 }
 
-.item3-1 >img {
+.item3-1 > img {
     width: 167px;
     height: 208px;
     position: absolute;
@@ -472,7 +472,7 @@ img[alt=prev], img[alt=next] {
     text-align: center;
 }
 
-.item3-1 > div > div:last-child {
+.item3-1 > div > p {
     font-size: 10px;
     line-height: 20px;
     color: #555;
