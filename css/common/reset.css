@@ -27,6 +27,7 @@ a {
 
 img {
     border: none;
+    max-width: 100%;
 }
 
 body {

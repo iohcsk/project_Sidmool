@@ -14,7 +14,7 @@ header {
     height: 100px;
     background-color: #f8ffe0;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
 }
 
 .header_box {
@@ -28,12 +28,16 @@ header {
 }
 
 h1 {
-    width: 204px;
+    width: 193px;
+    height: auto;
 }
 
 header h1 img {
-    width: 193px;
-    height: 52px;
+    width: 100%;
+}
+
+.sidemenu_wrap {
+    display: none;
 }
 
 nav {
@@ -72,11 +76,10 @@ nav {
     top: 20px;
     left: 0;
     width: 100%;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
 }
 
 .gnb li:hover .submenu {
-    display: block;
     position: absolute;
     top: 65px;
     left: 0;
@@ -90,13 +93,13 @@ nav {
     align-items: center;
 }
 
-.header_icon img {
+.header_icon a img {
     padding-left: 30px;
 }
 
 /* Contents */
 
-#contents {
+.contents_wrap {
     max-width: 690px;
     width: 100%;
     overflow: hidden;
@@ -108,25 +111,28 @@ nav {
     overflow: hidden;
 }
 
-.txt_1 > h2 {
+.txt_1 h2 {
     font-size: 30px;
     color: #333;
+    position: relative;
 }
 
-.txt_1 > div {
+.txt_1 h2::before {
+    content: '';
     width: 100%;
     height: 3px;
     background-color: #b2d448;
-    margin-top: 13px;
+    position: absolute;
+    top: 55px;
 }
 
-.txt_1 > p:first-of-type {
+.txt_1 p:first-of-type {
     font-size: 22px;
     color: #333;
     margin-top: 35px;
 }
 
-.txt_1 > p:last-of-type {
+.txt_1 p:last-of-type {
     font-size: 17px;
     font-weight: 400;
     margin-top: 35px;
@@ -136,8 +142,7 @@ nav {
 .naver_kakao {
     width: 100%;
     height: 53px;
-    margin: 50px 0 50px;
-    font-size: 20px;
+    margin: 50px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -151,32 +156,31 @@ nav {
     justify-content: flex-start;
 }
 
-.naver > div:first-child,
-.kakao > div:first-child {
-    width: 50px;
-    height: 53px;
+.icon {
+    width: 15%;
     line-height: 53px;
     border-right: 1px solid #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
-.naver > a > p, .kakao > a > p {
-    width: 285px;
-    height: 53px;
+.icon img {
+    vertical-align: middle;
+}
+
+.naver > a, .kakao > a {
+    width: 85%;
     font-size: 18px;
     font-weight: 400;
     line-height: 53px;
     text-align: center;
 }
 
-.form{
+.info {
     width: 100%;
-    height: 361px;
+    overflow: hidden;
 }
 
-.form form input {
+.info form input {
     width: 100%;
     height: 50px;
     border: 1px solid #ddd;
@@ -184,24 +188,24 @@ nav {
     padding: 15px;
 }
 
-.form > form > input:first-child {
+.info form input[name="name"] {
     margin-bottom: 20px;
 }
 
-.form form input::placeholder {
+.info form input::placeholder {
     font-family: 'NanumSquareRound';
     color: #999;
     font-size: 15px;
 }
 
-.form > form > input:nth-child(2) {
-    width: 558px;
+.info form input[name="birthday"] {
+    width: 80%;
     height: 50px;
     float: left;
 }
 
-.form > form > div {
-    width: 112px;
+.info form .gender {
+    width: 16%;
     height: 50px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -209,7 +213,7 @@ nav {
     float: right;
 }
 
-.form > form > div div {
+.gender div{
     width: 50%;
     height: 50px;
     line-height: 50px;
@@ -218,23 +222,24 @@ nav {
     float: left;
 }
 
-.form > form > div div:hover {
+.gender div:hover {
     background-color: #ccc;
     border-radius: 10px;
 }
 
-.form > form > div > div:first-of-type {
+.gender div:first-child {
     border-right: 1px solid #ddd;
 }
 
-.form > form > input:nth-of-type(3) {
-    width: 558px;
+.info form input[name="id"] {
+    width: 80%;
     height: 50px;
     margin-top: 48px;
+    float: left;
 }
 
-.form > form > button {
-    width: 112px;
+.id_check_btn {
+    width: 16%;
     height: 50px;
     font-family: 'NanumSquareRound';
     font-size: 15px;
@@ -242,11 +247,13 @@ nav {
     color: #444;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin-left: 15px;
+    margin-top: 48px;
     cursor: pointer;
+    float: right;
 }
 
-input[type=password] {
+.info form input[type="password"] {
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -257,11 +264,11 @@ input[type=password] {
     color: #444;
 }
 
-.txt_2 > h3 {
+.txt_2 h3 {
     font-size: 25px;
 }
 
-.txt_2 > p {
+.txt_2 p {
     margin-top: 30px;
     font-size: 18px;
     font-weight: 400;
@@ -269,11 +276,12 @@ input[type=password] {
 }
 
 .terms_of_service {
-    width: 690px;
-    height: 320px;
+    width: 100%;
+    overflow: hidden;
     font-size: 17px;
     font-weight: 400;
     line-height: 50px;
+    margin-bottom: 50px;
 }
 
 input[type="checkbox"] {
@@ -331,7 +339,7 @@ label[for="checkbox5"] span {
     margin-top: 13px;
 }
 
-#contents > button {
+.join_btn {
     width: 100%;
     height: 60px;
     background-color: #333;
@@ -343,7 +351,7 @@ label[for="checkbox5"] span {
     cursor: pointer;
 }
 
-#contents > button:hover {
+.join_btn:hover {
     color: #333;
     background-color: #fff;
     border: 1px solid #333;
@@ -353,15 +361,18 @@ label[for="checkbox5"] span {
 /* Footer */
 
 footer {
+    max-width: 1920px;
     width: 100%;
     height: 200px;
     background-color: #eee;
 }
 
 .footer_box {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .footer_box > img {
@@ -369,48 +380,51 @@ footer {
     margin-top: 50px;
 }
 
-.footer_txt {
-    width: 822px;
-    height: 130px;
-    padding-left: 70px;
-    float: left;
+.footer_txtbox {
+    margin-left: 180px;
 }
 
-.footer_txt > div:first-of-type ul {
-    display: flex;
-    justify-content: flex-start;
+.footer_nav {
     padding: 20px 0;
 }
 
-.footer_txt > div:first-of-type ul li {
+.footer_nav li {
+    display: inline-block;
     font-size: 15px;
     color: #555;
     padding-right: 50px;
 }
 
-.footer_txt > div:nth-of-type(2) {
-    width: 815px;
+.footer_txt {
+    width: 70%;
     height: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.footer_txt > div:nth-of-type(2) li {
+.footer_txt ul li {
     font-size: 10px;
     color: #555;
     line-height: 20px;
 }
 
 .sns {
-    float: left;
-    margin: 20px 0 0 70px;
+    position: absolute;
+    top: 20px;
+    right: 7%;
 }
 
-.sns img {
-    padding: 3px;
+.sns a img {
+    padding: 0 10px;
 }
 
-.footer_box span:last-of-type {
-    float: right;
-    margin-top: 20px;
+.goTop {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../img/up-arrow.png) no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 0;
 }

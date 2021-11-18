@@ -14,7 +14,7 @@ header {
     height: 100px;
     background-color: #f8ffe0;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
 }
 
 .header_box {
@@ -28,12 +28,16 @@ header {
 }
 
 h1 {
-    width: 204px;
+    width: 193px;
+    height: auto;
 }
 
 header h1 img {
-    width: 193px;
-    height: 52px;
+    width: 100%;
+}
+
+.sidemenu_wrap {
+    display: none;
 }
 
 nav {
@@ -127,12 +131,12 @@ nav {
     height: 2px;
     background-color: #ccc;
     position: absolute;
-    left: 805px;
     top: 60px;
 }
 
 .table_wrap {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
     
@@ -175,8 +179,9 @@ td {
     margin: 100px 0;
 }
 
-.section1 div {
-    width: 1320px;
+.sec1_box {
+    max-width: 1320px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
     padding: 50px 0;
@@ -184,47 +189,54 @@ td {
     color: #555;
     text-align: center;
     font-family: 'NanumSquareRound';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section1 div p {
+.sec1_box p {
     line-height: 50px;
-    position: relative;
 }
 
-.section1 p span {
+.sec1_box p span {
     font-size: 2rem;
 }
 
-.section1 div p:first-child:before {
+.sec1_box p:last-child::before {
     content: '';
     width: 900px;
     height: 2px;
     background-color: #555;
     position: absolute;
-    left: 215px;
-    top: 125px;
+    top: -10px;
+    left: 0;
 }
 
-.section1 p:last-child {
+.sec1_box p:last-child {
     text-align: left;
     margin-top: 30px;
-    margin-left: 220px;
+    position: relative;
 }
 
-.section1 p:last-child span {
+.sec1_box p:last-child span {
     font-weight: 600;
 }
 
 .section2 {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
 }
 
-.section2 h3 {
+.sec2_title {
+    width: 100%;
     height: 70px;
-    font-size: 32px;
     text-align: center;
+}
+
+.sec2_title h3 {
+    font-size: 32px;
     position: relative;
 }
 
@@ -234,24 +246,24 @@ td {
     height: 2px;
     background-color: #ccc;
     position: absolute;
-    left: 455px;
     top: 60px;
 }
 
-.section2 .sec2_innerbox {
-    width: 1096px;
+.sec2_box {
+    max-width: 1096px;
+    width: 100%;
     height: 540px;
     margin: 80px auto 100px;
     display: flex;
     flex-flow: column wrap;
 }
 
-.sec2_innerbox div {
+.sec2_box div {
     width: 50%;
     height: 135px;
 }
 
-.sec2_innerbox div span {
+.sec2_box div span {
     display: block;
     width: 185px;
     height: 135px;
@@ -264,13 +276,13 @@ td {
     float: left;
 }
 
-.sec2_innerbox div h4 {
+.sec2_box div h4 {
     font-size: 20px;
     padding-top: 20px;
     padding-left: 80px;
 }
 
-.sec2_innerbox div p {
+.sec2_box div p {
     font-size: 18px;
     font-weight: 500;
     color: #999;
@@ -280,15 +292,18 @@ td {
 /* Footer */
 
 footer {
+    max-width: 1920px;
     width: 100%;
     height: 200px;
     background-color: #eee;
 }
 
 .footer_box {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .footer_box > img {
@@ -296,48 +311,51 @@ footer {
     margin-top: 50px;
 }
 
-.footer_txt {
-    width: 822px;
-    height: 130px;
-    padding-left: 70px;
-    float: left;
+.footer_txtbox {
+    margin-left: 180px;
 }
 
-.footer_txt > div:first-of-type ul {
-    display: flex;
-    justify-content: flex-start;
+.footer_nav {
     padding: 20px 0;
 }
 
-.footer_txt > div:first-of-type ul li {
+.footer_nav li {
+    display: inline-block;
     font-size: 15px;
     color: #555;
     padding-right: 50px;
 }
 
-.footer_txt > div:nth-of-type(2) {
-    width: 815px;
+.footer_txt {
+    width: 70%;
     height: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.footer_txt > div:nth-of-type(2) li {
+.footer_txt ul li {
     font-size: 10px;
     color: #555;
     line-height: 20px;
 }
 
 .sns {
-    float: left;
-    margin: 20px 0 0 70px;
+    position: absolute;
+    top: 20px;
+    right: 7%;
 }
 
-.sns img {
-    padding: 3px;
+.sns a img {
+    padding: 0 10px;
 }
 
-.footer_box span:last-of-type {
-    float: right;
-    margin-top: 20px;
+.goTop {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../img/up-arrow.png) no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 0;
 }

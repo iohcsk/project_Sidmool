@@ -14,7 +14,7 @@ header {
     height: 100px;
     background-color: #f8ffe0;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
 }
 
 .header_box {
@@ -28,12 +28,16 @@ header {
 }
 
 h1 {
-    width: 204px;
+    width: 193px;
+    height: auto;
 }
 
 header h1 img {
-    width: 193px;
-    height: 52px;
+    width: 100%;
+}
+
+.sidemenu_wrap {
+    display: none;
 }
 
 nav {
@@ -76,7 +80,6 @@ nav {
 }
 
 .gnb li:hover .submenu {
-    display: block;
     position: absolute;
     top: 65px;
     left: 0;
@@ -96,15 +99,16 @@ nav {
 
 /* Contents */
 
-#contents_wrap {
+.contents_wrap {
     max-width: 1320px;
     width: 100%;
-    margin: 0 auto;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .login_box {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     overflow: hidden;
     margin: 200px auto 100px;
     border: 1px solid #ddd;
@@ -177,16 +181,16 @@ button[name=login]:hover {
     margin: 0 auto;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
     display: none;
 }
 
-label {
+label[for="checkbox"] {
     color: #777;
     font-size: 15px;
 }
 
-label span {
+label[for="checkbox"] span {
     width: 25px;
     height: 25px;
     border: 1px solid #ddd;
@@ -197,13 +201,13 @@ label span {
     float: left;
 }
 
-input[type=checkbox]:checked +
-label span {
+input[type="checkbox"]:checked +
+label[for="checkbox"] span {
     background: url(../img/check.png) no-repeat;
     background-position: center;
 }
 
-.save_search label[for=checkbox] p {
+.save_search label[for="checkbox"] p {
     display: inline;
     font-size: 13px;
     line-height: 25px;
@@ -262,15 +266,18 @@ button[name=non_member_order]:hover {
 /* Footer */
 
 footer {
+    max-width: 1920px;
     width: 100%;
     height: 200px;
     background-color: #eee;
 }
 
 .footer_box {
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     height: 200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .footer_box > img {
@@ -278,48 +285,51 @@ footer {
     margin-top: 50px;
 }
 
-.footer_txt {
-    width: 822px;
-    height: 130px;
-    padding-left: 70px;
-    float: left;
+.footer_txtbox {
+    margin-left: 180px;
 }
 
-.footer_txt > div:first-of-type ul {
-    display: flex;
-    justify-content: flex-start;
+.footer_nav {
     padding: 20px 0;
 }
 
-.footer_txt > div:first-of-type ul li {
+.footer_nav li {
+    display: inline-block;
     font-size: 15px;
     color: #555;
     padding-right: 50px;
 }
 
-.footer_txt > div:nth-of-type(2) {
-    width: 815px;
+.footer_txt {
+    width: 70%;
     height: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.footer_txt > div:nth-of-type(2) li {
+.footer_txt ul li {
     font-size: 10px;
     color: #555;
     line-height: 20px;
 }
 
 .sns {
-    float: left;
-    margin: 20px 0 0 70px;
+    position: absolute;
+    top: 20px;
+    right: 7%;
 }
 
-.sns img {
-    padding: 3px;
+.sns a img {
+    padding: 0 10px;
 }
 
-.footer_box span:last-of-type {
-    float: right;
-    margin-top: 20px;
+.goTop {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../img/up-arrow.png) no-repeat center;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 0;
 }
