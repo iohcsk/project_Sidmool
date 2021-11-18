@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,7 @@
     <title>로그인</title>
     <link rel="stylesheet" href="css/common/reset.css" type="text/css">
     <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link rel="stylesheet" href="css/login_MQ.css" type="text/css">
 </head>
 <body>
     <div id="wrap">
@@ -55,7 +56,6 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- Icons -->
                 <div class="header_icon">
                     <a href="login.html">
                         <img src="img/user.png" alt="로그인">
@@ -67,11 +67,25 @@
                         <img src="img/shopping-bag.png" alt="장바구니">
                     </a>
                 </div>
+                <!-- Side Menu (tablet, mobile) -->
+                <div class="sidemenu_wrap">
+                    <button class="sidemenu_open"></button>
+                    <div class="sidemenu">
+                        <button class="sidemenu_close"></button>
+                        <ul class="side_gnb">
+                            <li><a href="sub1_brand.html">브랜드</a></li>
+                            <li><a href="sub2_bestnew.html">제품</a></li>
+                            <li><a href="sub3_event.html">이벤트 &amp; 혜택</a></li>
+                            <li><a href="sub4_notice.html">고객센터</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
         </header>
         <!-- Contents -->
-        <section id="contents_wrap">
-            <div class="login_box">
+        <div class="contents_wrap">
+            <section class="login_box">
                 <h2>LOGIN</h2>
                 <p>시드물에 오신 것을 환영합니다&#33;</p>
                 <div class="id_pw_login">
@@ -99,23 +113,21 @@
                         <button type="button" name="non_member_order">비회원 주문</button>
                     </a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <!-- Footer -->
         <footer>
             <div class="footer_box">
                 <img src="img/Logo(footer).png" alt="logo_footer">
-                <div class="footer_txt">
-                    <div>
-                        <ul>
-                            <li><a href="sub1_brand.html">회사 소개</a></li>
-                            <li><a href="#">개인정보처리방침</a></li>
-                            <li><a href="#">이용약관</a></li>
-                            <li><a href="#">이용안내</a></li>
-                            <li><a href="#">사업자정보확인</a></li>
-                        </ul>
-                    </div>
-                    <div>
+                <div class="footer_txtbox">
+                    <ul class="footer_nav">
+                        <li><a href="sub1_brand.html">회사 소개</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">사업자정보확인</a></li>
+                    </ul>
+                    <div class="footer_txt">
                         <ul>
                             <li>상호 &#58; 주식회사 시드물</li>
                             <li>주소 &#58; &#40;우&#41; 대전광역시 중구 안영로42 &#40;안영동&#41;</li>
@@ -135,7 +147,7 @@
                         </ul>
                     </div>
                 </div>
-                <span class="sns">
+                <div class="sns">
                     <a href="#">
                         <img src="img/n.png" alt="Naver">
                     </a>
@@ -148,13 +160,13 @@
                     <a href="#">
                         <img src="img/instagram.png" alt="Instragram">
                     </a>
-                </span>
-                <span>
-                    <a href="#">
-                        <img src="img/up-arrow.png" alt="top">
-                    </a>
-                </span>
+                </div>
+                <button class="goTop"></button>
             </div>
         </footer>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/login.js" type="text/javascript"></script>
 </body>
 </html>
