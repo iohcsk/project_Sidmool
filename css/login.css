@@ -6,97 +6,6 @@
     overflow: hidden;
 }
 
-/* Header */
-
-header {
-    max-width: 1920px;
-    width: 100%;
-    height: 100px;
-    background-color: #f8ffe0;
-    position: fixed;
-    z-index: 9;
-}
-
-.header_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    width: 193px;
-    height: auto;
-}
-
-header h1 img {
-    width: 100%;
-}
-
-.sidemenu_wrap {
-    display: none;
-}
-
-nav {
-    width: 984px;
-}
-
-.gnb {
-    width: auto;
-    float: right;
-}
-
-.gnb li {
-    width: 150px;
-    float: left;
-    font-size: 18px;
-    line-height: 90px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-}
-
-.gnb li:hover, .submenu a:hover {
-    color: #637912;
-}
-
-.submenu li {
-    font-size: 15px;
-    line-height: 50px;
-    color: #555;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    transition-duration: 0.5s;
-}
-
-.gnb li:hover .submenu {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: #f8ffe0;
-}
-
-.header_icon {
-    display: flex;
-    align-items: center;
-}
-
-.header_icon a img {
-    padding-left: 30px;
-}
-
 /* Contents */
 
 .contents_wrap {
@@ -263,73 +172,61 @@ button[name=non_member_order]:hover {
     transition-duration: .3s;
 }
 
-/* Footer */
 
-footer {
-    max-width: 1920px;
-    width: 100%;
-    height: 200px;
-    background-color: #eee;
+
+/* Media Query */
+
+@media screen and (max-width:1024px) {
+
+    #wrap {
+        max-width: 1024px;
+    }
+
+    /* Contents */
+
+    .contents_wrap {
+        max-width: 1024px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 }
 
-.footer_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 200px;
-    margin: 0 auto;
-    position: relative;
-}
+@media screen and (max-width:768px) {
+    .contents_wrap {
+        max-width: 768px;
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 
-.footer_box > img {
-    float: left;
-    margin-top: 50px;
-}
+    .id_pw_login {
+        width: 95%;
+    }
 
-.footer_txtbox {
-    margin-left: 180px;
-}
+    form {
+        width: 60%;
+    }
 
-.footer_nav {
-    padding: 20px 0;
-}
+    button[name=login] {
+        width: 30%;
+    }
 
-.footer_nav li {
-    display: inline-block;
-    font-size: 15px;
-    color: #555;
-    padding-right: 50px;
-}
+    .save_search {
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 
-.footer_txt {
-    width: 70%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-}
+    .buttons_bottom {
+        width: 95%;
+    }
 
-.footer_txt ul li {
-    font-size: 10px;
-    color: #555;
-    line-height: 20px;
-}
+    button[name=join] {
+        width: 60%;
+    }
 
-.sns {
-    position: absolute;
-    top: 20px;
-    right: 7%;
-}
-
-.sns a img {
-    padding: 0 10px;
-}
-
-.goTop {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: url(../img/up-arrow.png) no-repeat center;
-    cursor: pointer;
-    position: absolute;
-    top: 17px;
-    right: 0;
+    button[name=non_member_order] {
+        width: 30%;
+    }
 }

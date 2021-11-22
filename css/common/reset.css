@@ -15,6 +15,16 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size:0.625em;
+} 
+
+body,h1,h2,h3,h4,h5,h6,button {
+    color:#222;
+    font-family: 'Nunito Sans', 'NanumSquareRound', sans-serif;
+    font-weight: bold;
+}
+
 ol, ul, li {
     list-style: none;
 }
@@ -30,7 +40,8 @@ img {
     max-width: 100%;
 }
 
-body {
-    font-family: 'Nunito Sans', 'NanumSquareRound', sans-serif;
-    font-weight: bold;
+button{
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
 }

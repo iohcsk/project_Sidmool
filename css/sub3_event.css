@@ -6,97 +6,6 @@
     overflow: hidden;
 }
 
-/* Header */
-
-header {
-    max-width: 1920px;
-    width: 100%;
-    height: 100px;
-    background-color: #f8ffe0;
-    position: fixed;
-    z-index: 9;
-}
-
-.header_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    width: 193px;
-    height: auto;
-}
-
-header h1 img {
-    width: 100%;
-}
-
-.sidemenu_wrap {
-    display: none;
-}
-
-nav {
-    width: 984px;
-}
-
-.gnb {
-    width: auto;
-    float: right;
-}
-
-.gnb li {
-    width: 150px;
-    float: left;
-    font-size: 18px;
-    line-height: 90px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-}
-
-.gnb li:hover, .submenu a:hover {
-    color: #637912;
-}
-
-.submenu li {
-    font-size: 15px;
-    line-height: 50px;
-    color: #555;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    transition-duration: 0.5s;
-}
-
-.gnb li:hover .submenu {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: #f8ffe0;
-}
-
-.header_icon {
-    display: flex;
-    align-items: center;
-}
-
-.header_icon a img {
-    padding-left: 30px;
-}
-
 /* Contents */
 
 .title {
@@ -121,13 +30,13 @@ nav {
 
 .title h3 {
     height: 70px;
-    font-size: 32px;
+    font-size: 3rem;
     position: relative;
 }
 
 .title h3::before {
     content: '';
-    width: 290px;
+    width: 265px;
     height: 2px;
     background-color: #ccc;
     position: absolute;
@@ -155,7 +64,7 @@ nav {
 
 th {
     height: 70px;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 800;
     background-color: #f8f8f8;
     border-right: 1px solid #ccc;
@@ -169,14 +78,14 @@ table tbody tr td:last-child {
 
 td {
     height: 70px;
+    font-size: 1.5rem;
     border-right: 1px solid #ccc;
 }
 
 .section1 {
     width: 100%;
-    height: 400px;
     background-color: #f8f8f8;
-    margin: 100px 0;
+    margin-top: 100px;
 }
 
 .sec1_box {
@@ -185,7 +94,7 @@ td {
     overflow: hidden;
     margin: 0 auto;
     padding: 50px 0;
-    font-size: 20px;
+    
     color: #555;
     text-align: center;
     font-family: 'NanumSquareRound';
@@ -195,11 +104,12 @@ td {
 }
 
 .sec1_box p {
-    line-height: 50px;
+    font-size: 1.8rem;
+    line-height: 2;
 }
 
 .sec1_box p span {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .sec1_box p:last-child::before {
@@ -226,7 +136,7 @@ td {
     max-width: 1320px;
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 100px auto 0;
 }
 
 .sec2_title {
@@ -236,11 +146,11 @@ td {
 }
 
 .sec2_title h3 {
-    font-size: 32px;
+    font-size: 3.2rem;
     position: relative;
 }
 
-.section2 h3::before {
+.sec2_title h3::before {
     content: '';
     width: 410px;
     height: 2px;
@@ -249,7 +159,7 @@ td {
     top: 60px;
 }
 
-.sec2_box {
+.sec2_boxWrap {
     max-width: 1096px;
     width: 100%;
     height: 540px;
@@ -258,12 +168,12 @@ td {
     flex-flow: column wrap;
 }
 
-.sec2_box div {
+.sec2_box {
     width: 50%;
     height: 135px;
 }
 
-.sec2_box div span {
+.sec2_box_num {
     display: block;
     width: 185px;
     height: 135px;
@@ -276,86 +186,129 @@ td {
     float: left;
 }
 
-.sec2_box div h4 {
-    font-size: 20px;
+.sec2_box_title {
+    font-size: 2rem;
     padding-top: 20px;
     padding-left: 80px;
 }
 
-.sec2_box div p {
-    font-size: 18px;
+.sec2_box_txt {
+    font-size: 1.8rem;
     font-weight: 500;
     color: #999;
     padding-top: 15px;
 }
 
-/* Footer */
 
-footer {
-    max-width: 1920px;
-    width: 100%;
-    height: 200px;
-    background-color: #eee;
+
+/* Media Query */
+
+@media screen and (max-width:1024px) {
+
+    #wrap {
+        max-width: 1024px;
+    }
+
+    /* Contents */
+
+    .table_wrap {
+        max-width: 1024px;
+        width: 95%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .title h3 {
+        font-size:  2.5rem;
+    }
+
+    .title h3::before {
+        content: '';
+        width: 220px;
+        height: 2px;
+        background-color: #ccc;
+        position: absolute;
+        top: 50px;
+    }
+
+    th {
+        font-size: 1.4rem;
+    }
+
+    .sec1_box {
+        width: 90%;
+    }
+
+    .sec1_box p:last-child {
+        text-align: center;
+    }
+
+    .sec1_box p:first-child {
+        text-align: left;
+    }
+
+    .section2 {
+        margin-top: 200px;
+    }
+
+    .sec2_title h3 {
+        font-size: 2.5rem;
+        position: relative;
+    }
+    
+    .sec2_title h3::before {
+        content: '';
+        width: 320px;
+        height: 2px;
+        background-color: #ccc;
+        position: absolute;
+        top: 50px;
+    }
+
+    .sec2_boxWrap {
+        width: 50%;
+        height: auto;
+        margin: 0 auto 100px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .sec2_box {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .sec2_box_num {
+        display: inline;
+        width: 10%;
+        height: auto;
+        float: unset;
+    }
+    
+    .sec2_box_title {
+        font-size: 2rem;
+        padding-top: 0;
+        padding-left: 0;
+    }
+    
+    .sec2_box_txt {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: #999;
+        padding-top: 20px;
+        padding-left: 0;
+    }
 }
 
-.footer_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 200px;
-    margin: 0 auto;
-    position: relative;
-}
+@media screen and (max-width:768px) {
+    .sec2_boxWrap {
+        width: 90%;
+    }
 
-.footer_box > img {
-    float: left;
-    margin-top: 50px;
-}
-
-.footer_txtbox {
-    margin-left: 180px;
-}
-
-.footer_nav {
-    padding: 20px 0;
-}
-
-.footer_nav li {
-    display: inline-block;
-    font-size: 15px;
-    color: #555;
-    padding-right: 50px;
-}
-
-.footer_txt {
-    width: 70%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer_txt ul li {
-    font-size: 10px;
-    color: #555;
-    line-height: 20px;
-}
-
-.sns {
-    position: absolute;
-    top: 20px;
-    right: 7%;
-}
-
-.sns a img {
-    padding: 0 10px;
-}
-
-.goTop {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: url(../img/up-arrow.png) no-repeat center;
-    cursor: pointer;
-    position: absolute;
-    top: 17px;
-    right: 0;
+    .sec2_box {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
 }

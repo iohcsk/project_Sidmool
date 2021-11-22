@@ -6,97 +6,6 @@
     overflow: hidden;
 }
 
-/* Header */
-
-header {
-    max-width: 1920px;
-    width: 100%;
-    height: 100px;
-    background-color: #f8ffe0;
-    position: fixed;
-    z-index: 9;
-}
-
-.header_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    width: 193px;
-    height: auto;
-}
-
-header h1 img {
-    width: 100%;
-}
-
-.sidemenu_wrap {
-    display: none;
-}
-
-nav {
-    width: 984px;
-}
-
-.gnb {
-    width: auto;
-    float: right;
-}
-
-.gnb li {
-    width: 150px;
-    float: left;
-    font-size: 18px;
-    line-height: 90px;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-}
-
-.gnb li:hover, .submenu a:hover {
-    color: #637912;
-}
-
-.submenu li {
-    font-size: 15px;
-    line-height: 50px;
-    color: #555;
-}
-
-.submenu {
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    transition-duration: 0.5s;
-}
-
-.gnb li:hover .submenu {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: #f8ffe0;
-}
-
-.header_icon {
-    display: flex;
-    align-items: center;
-}
-
-.header_icon a img {
-    padding-left: 30px;
-}
-
 /* Contents */
 
 .contents_wrap {
@@ -112,7 +21,7 @@ nav {
 }
 
 .txt_1 h2 {
-    font-size: 30px;
+    font-size: 3rem;
     color: #333;
     position: relative;
 }
@@ -127,13 +36,13 @@ nav {
 }
 
 .txt_1 p:first-of-type {
-    font-size: 22px;
+    font-size: 2.2rem;
     color: #333;
     margin-top: 35px;
 }
 
 .txt_1 p:last-of-type {
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin-top: 35px;
     line-height: 30px;
@@ -169,7 +78,7 @@ nav {
 
 .naver > a, .kakao > a {
     width: 85%;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 53px;
     text-align: center;
@@ -195,7 +104,7 @@ nav {
 .info form input::placeholder {
     font-family: 'NanumSquareRound';
     color: #999;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .info form input[name="birthday"] {
@@ -216,6 +125,7 @@ nav {
 .gender div{
     width: 50%;
     height: 50px;
+    font-size: 1.5rem;
     line-height: 50px;
     font-weight: 400;
     text-align: center;
@@ -242,7 +152,7 @@ nav {
     width: 16%;
     height: 50px;
     font-family: 'NanumSquareRound';
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #444;
     border: 1px solid #ddd;
@@ -259,18 +169,17 @@ nav {
 
 .txt_2 {
     width: 100%;
-    height: 170px;
-    margin-top: 70px;
+    margin: 70px 0 50px;
     color: #444;
 }
 
 .txt_2 h3 {
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .txt_2 p {
     margin-top: 30px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 30px;
 }
@@ -278,7 +187,7 @@ nav {
 .terms_of_service {
     width: 100%;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     line-height: 50px;
     margin-bottom: 50px;
@@ -347,7 +256,7 @@ label[for="checkbox5"] span {
     color: #fff;
     border-radius: 10px;
     border: none;
-    font-size: 20px;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -358,73 +267,75 @@ label[for="checkbox5"] span {
     transition-duration: .5s;
 }
 
-/* Footer */
 
-footer {
-    max-width: 1920px;
-    width: 100%;
-    height: 200px;
-    background-color: #eee;
+
+/* Media Query */
+
+@media screen and (max-width:1024px) {
+
+    #wrap {
+        max-width: 1024px;
+    }
+
+    /* Contents */
+
+    .contents_wrap {
+        max-width: 690px;
+        width: 90%;
+        overflow: hidden;
+        margin: 200px auto 100px;
+    }
+  
+    .naver, .kakao {
+        width: 47%;
+    }
+
+    .naver > a, .kakao > a {
+        font-size: 1.5rem;
+    }
 }
 
-.footer_box {
-    max-width: 1320px;
-    width: 100%;
-    height: 200px;
-    margin: 0 auto;
-    position: relative;
-}
 
-.footer_box > img {
-    float: left;
-    margin-top: 50px;
-}
+@media screen and (max-width:768px) {
 
-.footer_txtbox {
-    margin-left: 180px;
-}
+    .txt_1 h2 {
+        font-size: 2.5rem;
+    }
 
-.footer_nav {
-    padding: 20px 0;
-}
+    .txt_1 p:first-of-type {
+        font-size: 2rem;
+    }
 
-.footer_nav li {
-    display: inline-block;
-    font-size: 15px;
-    color: #555;
-    padding-right: 50px;
-}
+    .icon {
+        border-right: none;
+        padding-left: 3%;
+    }
 
-.footer_txt {
-    width: 70%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-}
+    .info form input[name="birthday"] {
+        width: 75%;
+    }
+    
+    .info form .gender {
+        width: 20%;
+    }
 
-.footer_txt ul li {
-    font-size: 10px;
-    color: #555;
-    line-height: 20px;
-}
+    .info form input[name="id"] {
+        width: 70%;
+    }
+    
+    .id_check_btn {
+        width: 26%;
+    }
 
-.sns {
-    position: absolute;
-    top: 20px;
-    right: 7%;
-}
+    .txt_2 p {
+        font-size: 1.6rem;
+    }
 
-.sns a img {
-    padding: 0 10px;
-}
+    .terms_of_service {
+        font-size: 1.5rem;
+    }
 
-.goTop {
-    width: 32px;
-    height: 32px;
-    border: none;
-    background: url(../img/up-arrow.png) no-repeat center;
-    cursor: pointer;
-    position: absolute;
-    top: 17px;
-    right: 0;
+    .terms_of_service ul li label span {
+        transform: translateY(3px);
+    }
 }
