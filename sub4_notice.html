@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
-    <link rel="stylesheet" href="css/sub4_notice.css" type="text/css">
     <link rel="stylesheet" href="css/common/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/sub4_notice_MQ.css" type="text/css">
+    <link rel="stylesheet" href="css/common/header_footer.css" type="text/css">
+    <link rel="stylesheet" href="css/sub4_notice.css" type="text/css">
 </head>
 <body>
     <div id="wrap">
@@ -16,7 +16,7 @@
                 <!-- Logo -->
                 <h1>
                     <a href="index.html">
-                        <img src="img/Logo.png" alt="logo">
+                        <img src="img/Logo.png" alt="Sidmool">
                     </a>
                 </h1>
                 <!-- Main Menu -->
@@ -84,20 +84,20 @@
             </div>
         </header>
         <!-- Contents -->
-        <section class="contents_wrap">
+        <div class="contents_wrap">
             <div class="title">
                 <h2>CUSTOMER</h2>
                 <h2>SERVICE</h2>
             </div>
-            <div class="menu_bar">
+            <section class="menubar">
                 <ul>
                     <li><a href="#">공지사항</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">1&#58;1 문의</a></li>
                     <li><a href="#">해외배송</a></li>
                 </ul>
-            </div>
-            <div class="contact">
+            </section>
+            <section class="contact">
                 <div class="contact_box">
                     <h3>고객만족 상담실</h3>
                     <p>1577&#45;9638</p>
@@ -111,11 +111,11 @@
                     <h3>해외 고객만족 상담실</h3>
                     <p>&#43;82&#45;42&#45;716&#45;0227</p>
                 </div>
-            </div>
+            </section>
             <div class="opening_hours">
                 <p>평일 09&#58;00 &#45; 17:00 &#47; 점심시간 12&#58;00 &#58; 13:30</p>
             </div>
-            <div class="table">
+            <section class="table">
                 <table>
                     <colgroup>
                         <col width="20%">
@@ -206,7 +206,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </section>
             <div class="pagination">
                 <a href="#">&lt;</a>
                 <a href="#">1</a>
@@ -221,7 +221,7 @@
                 <a href="#">10</a>
                 <a href="#">&gt;</a>
             </div>
-            <div class="search_bar">
+            <section class="search_bar">
                 <select>
                     <option>전체</option>
                     <option>제목</option>
@@ -229,12 +229,14 @@
                 </select>
                 <input type="text" name="keyword">
                 <button>검색</button>
-            </div>
-        </section>
+            </section>
+        </div>
         <!-- Footer -->
         <footer>
             <div class="footer_box">
-                <img src="img/Logo(footer).png" alt="logo_footer">
+                <h2 class="footer_logo">
+                    <img src="img/Logo(footer).png" alt="Sidmool">
+                </h2>
                 <div class="footer_txtbox">
                     <ul class="footer_nav">
                         <li><a href="sub1_brand.html">회사 소개</a></li>
@@ -278,6 +280,7 @@
                     </a>
                 </div>
                 <button class="goTop"></button>
+                <span class="mobile_footer_txt">COPYRIGHT &copy; 2008 SIDMOOL ALL RIGHTS RESERVED</span>
             </div>
         </footer>
     </div>
