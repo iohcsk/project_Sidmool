@@ -94,9 +94,6 @@ td {
     overflow: hidden;
     margin: 0 auto;
     padding: 50px 0;
-    
-    color: #555;
-    text-align: center;
     font-family: 'NanumSquareRound';
     display: flex;
     flex-direction: column;
@@ -104,6 +101,8 @@ td {
 }
 
 .sec1_box p {
+    color: #555;
+    text-align: center;
     font-size: 1.8rem;
     line-height: 2;
 }
@@ -142,11 +141,11 @@ td {
 .sec2_title {
     width: 100%;
     height: 70px;
-    text-align: center;
 }
 
 .sec2_title h3 {
     font-size: 3.2rem;
+    text-align: center;
     position: relative;
 }
 

@@ -170,27 +170,31 @@
 .txt_2 {
     width: 100%;
     margin: 70px 0 50px;
-    color: #444;
 }
 
 .txt_2 h3 {
     font-size: 2.5rem;
+    color: #444;
 }
 
 .txt_2 p {
-    margin-top: 30px;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 30px;
+    color: #444;
+    margin-top: 30px;
 }
 
 .terms_of_service {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.terms_of_service ul li {
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 50px;
-    margin-bottom: 50px;
 }
 
 input[type="checkbox"] {
@@ -331,7 +335,7 @@ label[for="checkbox5"] span {
         font-size: 1.6rem;
     }
 
-    .terms_of_service {
+    .terms_of_service ul li {
         font-size: 1.5rem;
     }
 

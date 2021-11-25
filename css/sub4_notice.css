@@ -20,20 +20,22 @@
     width: 100%;
     overflow: hidden;
     margin: 200px auto 100px;
-    text-align: center;
-    font-family: 'Nunito Sans';
 }
 
 .title h2:first-of-type {
     font-size: 3rem;
     font-weight: 700;
     color: #77b300;
+    text-align: center;
+    font-family: 'Nunito Sans';
 }
 
 .title h2:last-of-type {
     font-size: 3rem;
     font-weight: 700;
     line-height: 50px;
+    text-align: center;
+    font-family: 'Nunito Sans';
 }
 
 .menubar {
@@ -82,7 +84,6 @@
 .contact_box {
     width: 33.3%;
     height: 90px;
-    text-align: center;
     float: left;
     position: relative;
 }
@@ -104,11 +105,13 @@
 .contact_box h3 {
     color: #77b300;
     font-size: 2.5rem;
+    text-align: center;
 }
 
 .contact_box p {
     font-size: 2rem;
     font-weight: 800;
+    text-align: center;
     margin-top: 20px;
 }
 
