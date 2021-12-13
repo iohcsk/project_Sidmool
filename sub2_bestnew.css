@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+#wrap {
+    max-width: 1920px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Contents */
+
+.contents_wrap {
+    max-width: 1320px;
+    width: 100%;
+    overflow: hidden;
+    margin: 100px auto;
+}
+
+.title_box {
+    width: 660px;
+    height: 50px;
+    margin: 100px auto;
+}
+
+.title_box div:first-of-type {
+    width: 330px;
+    height: 50px;
+    background-color: #555;
+    float: left;
+}
+
+.title_box div:first-of-type a {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 50px;
+    text-align: center;
+}
+
+.title_box div:last-of-type {
+    display: inline-block;
+    width: 330px;
+    height: 50px;
+    background-color: #eee;
+}
+
+.title_box div:last-of-type a {
+    display: block;    
+    color: #555;
+    font-size: 2rem;
+    line-height: 50px;
+    text-align: center;
+}
+
+.item1 {
+    width: 100%;
+    height: 518px;
+}
+
+.item1 .left_area, .item3 .left_area {
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+.product_num {
+    display: block;
+    width: 100%;
+    color: #ccc;
+    font-size: 4.8rem;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+}
+
+.product_num::before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    background-color: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 120%;
+}
+
+.product_name_kr {
+    font-size: 3.2rem;
+    margin-top: 85px;
+}
+
+.product_name_en {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #aaa;
+    margin: 30px 0;
+}
+
+.product_txt {
+    font-size: 2rem;
+    line-height: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.icons {
+    width: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details_btn {
+    width: 100px;
+    height: 30px;
+    font-family: 'NanumSquareRound';
+    font-size: 1.4rem;
+    color: #aaa;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    margin: 65px auto 0;
+    cursor: pointer;
+}
+
+.details_btn:hover {
+    color: #ddd;
+    background-color: #555;
+    border: none;
+}
+
+.item1 .right_area, .item3 .right_area {
+    width: 50%;
+    height: inherit;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.item2, .item3 {
+    width: 100%;
+    height: 518px;
+    margin-top: 100px;
+}
+
+.item2 .left_area {
+    width: 50%;
+    height: inherit;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item2 .right_area {
+    width: 50%;
+    text-align: center;
+    float: right;
+}
+
+
+
+/* Media Query */
+
+@media screen and (max-width:1024px) {
+
+    #wrap {
+        max-width: 1024px;
+    }
+
+    /* Contents */
+
+    .contents_wrap {
+        max-width: 1024px;
+        width: 95%;
+        overflow: hidden;
+        margin: 100px auto;
+    }
+
+    .title_box {
+        width: 80%;
+        height: 50px;
+        margin: 100px auto;
+    }
+
+    .title_box div:first-of-type {
+        width: 50%;
+    }
+    
+    .title_box div:last-of-type{
+        width: 50%;
+    }
+
+    .item1 {
+        height: auto;
+    }
+
+    .item2{
+        position: relative;
+    }
+
+    .item3 {
+        height: 1100px;
+        margin-top: 600px;
+        position: relative;
+    }
+
+    .item1 .left_area {
+        width: 90%;
+        margin: 0 auto;
+        float: unset;
+    }
+
+    .item1 .right_area, .item3 .right_area {
+        display: block;
+        width: 80%;
+        height: fit-content;
+        margin: 50px auto 100px;
+        float: unset;
+        text-align: center;
+    }
+
+    .item2 .left_area {
+        display: block;
+        width: 80%;
+        height: fit-content;
+        margin: 50px auto;
+        float: unset;
+        text-align: center;
+        position: absolute;
+        top: 550px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .item2 .right_area {
+        width: 90%;
+        text-align: center;
+        float: unset;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .item3 .left_area {
+        width: 90%;
+        float: unset;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .item3 .right_area {
+        position: absolute;
+        top: 530px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
