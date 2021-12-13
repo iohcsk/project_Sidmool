@@ -99,7 +99,7 @@ label[for="checkbox"] {
     font-size: 15px;
 }
 
-label[for="checkbox"] span {
+label[for="checkbox"] span:first-child {
     width: 25px;
     height: 25px;
     border: 1px solid #ddd;
@@ -111,12 +111,12 @@ label[for="checkbox"] span {
 }
 
 input[type="checkbox"]:checked +
-label[for="checkbox"] span {
+label[for="checkbox"] span:first-child {
     background: url(../img/check.png) no-repeat;
     background-position: center;
 }
 
-.save_search label[for="checkbox"] p {
+.save_search label[for="checkbox"] span:last-child {
     display: inline;
     font-size: 13px;
     line-height: 25px;
@@ -137,11 +137,13 @@ label[for="checkbox"] span {
     margin: 50px auto 70px;
 }
 
-button[name=join] {
+.join_btn {
+    display: inline-block;
     width: 267px;
     height: 60px;
-    font-family: 'NanumSquareRound';
-    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 60px;
+    text-align: center;
     color: #fff;
     background-color: #637912;
     border: none;
@@ -149,16 +151,18 @@ button[name=join] {
     cursor: pointer;
 }
 
-button[name=join]:hover {
+.join_btn:hover {
     background-color: #b2d448;
     transition-duration: .3s;
 }
 
-button[name=non_member_order] {
+.non_member_order {
+    display: inline-block;
     width: 100px;
     height: 60px;
-    font-family: 'NanumSquareRound';
-    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 60px;
+    text-align: center;
     color: #fff;
     background-color: #ccc;
     border: none;
@@ -167,7 +171,7 @@ button[name=non_member_order] {
     margin-left: 28px;
 }
 
-button[name=non_member_order]:hover {
+.non_member_order:hover {
     background-color: #555;
     transition-duration: .3s;
 }

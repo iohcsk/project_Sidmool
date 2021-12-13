@@ -62,6 +62,14 @@
     font-family: 'NanumSquareRound';
 }
 
+.table_columns col:not(:nth-child(3)) {
+    width: 20%;
+}
+
+.table_columns col:nth-child(3) {
+    width: 40%;
+}
+
 th {
     height: 70px;
     font-size: 2rem;

@@ -129,12 +129,20 @@
     text-align: center;
 }
 
-.table table {
+.table_div table {
     width: 100%;
     overflow: hidden;
     border-spacing: 0;
     color: #555;
     font-size: 1.6rem;
+}
+
+.table_columns col:not(:nth-child(2)) {
+    width: 20%;
+}
+
+.table_columns col:nth-child(2) {
+    width: 40%;
 }
 
 th {
