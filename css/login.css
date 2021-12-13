@@ -25,14 +25,14 @@
 }
 
 .login_box h2 {
-    font-size: 30px;
+    font-size: 3rem;
     color: #333;
     text-align: center;
     margin-top: 70px;
 }
 
 .login_box > p {
-    font-size: 20px;
+    font-size: 3.2rem;
     color: #666;
     text-align: center;
     margin-top: 40px;
@@ -63,14 +63,14 @@
 .login_form input::placeholder {
     font-family: 'NanumSquareRound';
     color: #999;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 button[name=login] {
     width: 100px;
     height: 100px;
     font-family: 'NanumSquareRound';
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #fff;
     background-color: #b2d448;
     border: none;
@@ -96,7 +96,7 @@ input[type="checkbox"] {
 
 label[for="checkbox"] {
     color: #777;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 label[for="checkbox"] span:first-child {
@@ -118,14 +118,14 @@ label[for="checkbox"] span:first-child {
 
 .save_search label[for="checkbox"] span:last-child {
     display: inline;
-    font-size: 13px;
+    font-size: 1.3rem;
     line-height: 25px;
     cursor: pointer;
 }
 
 .save_search > p {
     display: inline;
-    font-size: 13px;
+    font-size: 1.3rem;
     color: #999;
     line-height: 25px;
     float: right;
