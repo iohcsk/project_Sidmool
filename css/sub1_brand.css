@@ -28,6 +28,7 @@
 .sec1_title {
     width: 100%;
     overflow: hidden;
+    text-align: center;
 }
 
 .sec1_title h3 {
